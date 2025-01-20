@@ -7,6 +7,7 @@ import exit from "/exit.svg";
 import StackingBanner from "../components/StackingBanner";
 import StackCards from "../components/StackCards";
 import Marketing from "../components/Marketing";
+import Footer from "../components/Footer";
 const Stacking = () => {
   const tabs = [
     {
@@ -46,6 +47,7 @@ const Stacking = () => {
   };
   return (
     <>
+    <div className="bg-[#10141B] text-white min-h-screen w-full">
       <OtherNavbar />
 
       <div className="max-w-7xl px-4 mx-auto">
@@ -75,6 +77,8 @@ const Stacking = () => {
 
       <StackCards />
       <Marketing />
+      <Footer />
+      </div>
     </>
   );
 };
