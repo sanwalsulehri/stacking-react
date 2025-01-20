@@ -41,7 +41,7 @@ const FAQs = () => {
       <div className="max-w-[914px] mt-10">
         {faqData.map((faq ,idx) => (
           <div key={faq.id} className={`border-b ${idx === 4 ? 'border-none' : 'border-b'} border-[#22252A] py-4`}>
-            <div className="flex justify-between items-center gap-2">
+            <div className="flex items-center justify-between gap-2">
               <div className="w-[85%]">
                 <h1
                   className="text-[18px] hover:text-white sm:text-[20px] font-[700] cursor-pointer"
