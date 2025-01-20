@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const FAQs = () => {
   const faqData = [
     {
       id: 1,
-      question: 'What is staking?',
+      question: "What is staking?",
       answer: `Staking is the process of participating in a proof-of-stake (PoS) blockchain network by locking up a certain amount of cryptocurrency to support the operations of the network, such as validating transactions and securing the network. In return, participants earn rewards, typically in the form of additional cryptocurrency.`,
     },
     {
       id: 2,
-      question: 'What is PoS and how does it work?',
+      question: "What is PoS and how does it work?",
       answer: `To start staking, you need to choose a staking provider, create an account, and then deposit the cryptocurrency you want to stake. The provider will typically give you instructions on how to delegate or lock up your coins to participate in staking.`,
     },
     {
       id: 3,
-      question: 'What is Validator',
+      question: "What is Validator",
       answer: `The risks of staking include potential loss of funds due to network vulnerabilities, staking provider issues, or volatility in cryptocurrency prices. Additionally, staked coins may be locked for a specific period, limiting your ability to access them.`,
     },
     {
       id: 4,
-      question: 'How staking can be profitable',
+      question: "How staking can be profitable",
       answer: `While some networks allow you to unstake your coins at any time, others have lock-up periods during which your coins cannot be accessed. It is important to check the specific terms and conditions of the staking network before getting involved.`,
     },
     {
-        id: 5,
-        question: 'What are the decentralized staking benefits?',
-        answer: `While some networks allow you to unstake your coins at any time, others have lock-up periods during which your coins cannot be accessed. It is important to check the specific terms and conditions of the staking network before getting involved.`,
-      },
+      id: 4,
+      question: "What are the decentralized staking benefits?",
+      answer: `While some networks allow you to unstake your coins at any time, others have lock-up periods during which your coins cannot be accessed. It is important to check the specific terms and conditions of the staking network before getting involved.`,
+    },
   ];
 
   const [activeFAQ, setActiveFAQ] = useState(null);
@@ -47,7 +47,7 @@ const FAQs = () => {
                   className="text-[18px] hover:text-white sm:text-[20px] font-[700] cursor-pointer"
                   onClick={() => toggleFAQ(faq.id)}
                   style={{
-                    color: activeFAQ === faq.id ? '#fff' : '#71798A',
+                    color: activeFAQ === faq.id ? "#fff" : "#71798A",
                   }}
                 >
                   {faq.question}
@@ -62,8 +62,9 @@ const FAQs = () => {
               <div
                 className="cursor-pointer"
                 style={{
-                  color: activeFAQ === faq.id ? '#48FF2C' : '#71798A',
-                  transform: activeFAQ === faq.id ? 'rotate(0deg)' : 'rotate(180deg)',
+                  color: activeFAQ === faq.id ? "#48FF2C" : "#71798A",
+                  transform:
+                    activeFAQ === faq.id ? "rotate(0deg)" : "rotate(180deg)",
                 }}
                 onClick={() => toggleFAQ(faq.id)}
               >
@@ -85,10 +86,12 @@ const FAQs = () => {
         ))}
       </div>
 
-<div className="font-medium mt-10 text-[#71798A]">
-Can’t find what are you looking for? <a href="#" className="underline text-[#48FF2C] font-medium">Contact support</a>
-</div>
-
+      <div className="font-medium mt-10 text-[#71798A]">
+        Can’t find what are you looking for?{" "}
+        <a href="#" className="underline text-[#48FF2C] font-medium">
+          Contact support
+        </a>
+      </div>
     </div>
   );
 };

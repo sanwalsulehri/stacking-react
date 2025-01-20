@@ -62,8 +62,12 @@ const StackingWorks = () => {
 
         <div className="bg-[#1E242C] flex flex-col justify-between rounded-[12px] py-5 px-5 min-h-[213px] h-full">
           <div className="flex items-center gap-6 flex-wrap">
-            <div className="font-bold border-r-2 leading-none pr-2 border-[#48FF2C] text-[28px] lg:text-[34px]">152.12</div>
-            <h1 className="font-semibold text-[28px] lg:text-[34px] text-[#B3B3B3]">USDT</h1>
+            <div className="font-bold border-r-2 leading-none pr-2 border-[#48FF2C] text-[28px] lg:text-[34px]">
+              152.12
+            </div>
+            <h1 className="font-semibold text-[28px] lg:text-[34px] text-[#B3B3B3]">
+              USDT
+            </h1>
           </div>
 
           <h6 className="font-medium leading-tight text-[18px]">
@@ -72,12 +76,10 @@ const StackingWorks = () => {
           </h6>
         </div>
 
-
         <div className="bg-[#1E242C] w-full relative flex flex-col justify-end rounded-[12px] py-5 px-5 min-h-[213px] h-full">
-        <div className="absolute z-[20]  left-0 w-full top-1/2 -translate-y-1/2">
-       <img src={tradechart} alt="" />
-        </div>
-
+          <div className="absolute z-[20]  left-0 w-full top-1/2 -translate-y-1/2">
+            <img src={tradechart} alt="" />
+          </div>
 
           <h6 className="font-medium relative z-[40] leading-tight text-[18px]">
             Choose the crypto

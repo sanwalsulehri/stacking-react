@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import user from '/user.png'
+import user from "/user.png";
 
 const OtherNavbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -61,7 +61,11 @@ const OtherNavbar = () => {
         <div className="flex  items-center gap-4 ">
           <div className="flex  items-center cursor-pointer  gap-4">
             <h1 className="font-semibold hidden sm:inline-flex">Reece.J</h1>
-           <img src={user} className="sm:w-[52px] w-10 h-10 rounded-full object-cover sm:h-[52px] " alt="" />
+            <img
+              src={user}
+              className="sm:w-[52px] w-10 h-10 rounded-full object-cover sm:h-[52px] "
+              alt=""
+            />
           </div>
           <div
             onClick={toggleDrawer}
@@ -92,7 +96,10 @@ const OtherNavbar = () => {
           isDrawerOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out h-screen justify-center sm:px-6 py-8 px-4 w-full sm:w-1/2 fixed top-0 left-0 bg-[#0c0f14]  gap-6 xl:gap-[34px]`}
       >
-        <div onClick={toggleDrawer} className="absolute cursor-pointer top-5 right-4">
+        <div
+          onClick={toggleDrawer}
+          className="absolute cursor-pointer top-5 right-4"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-auto w-8 text-[#71798A] hover:text-white"
@@ -119,8 +126,6 @@ const OtherNavbar = () => {
             {link.name}
           </a>
         ))}
-
-       
       </div>
     </>
   );

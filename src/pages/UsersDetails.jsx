@@ -1,18 +1,17 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
-import Usdt from '../components/Usdt'
 import MainLayout from '../layout/MainLayout'
-import StakingAssets from '../components/StakingAssets'
+import Users from '../components/User'
+import UserDetail from '../components/UserDetail'
 
-const Dashboard = () => {
+const UserDetails = () => {
   return (
     <div>
       <MainLayout>
-        <Usdt />
-        <StakingAssets />
+        <UserDetail />
       </MainLayout>
     </div>
   )
 }
 
-export default Dashboard
+export default UserDetails
