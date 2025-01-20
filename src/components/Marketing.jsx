@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import bitCoin from "/bitcoin.png";
 import doge from "/doge.png";
 import otherCoin from "/otherCoin.png";
@@ -103,14 +103,18 @@ const Marketing = () => {
         <h1 className="font-[700] text-[24px] sm:text-[28px]">Bitcoin</h1>
         <div className="mt-4 grid grid-cols-3 gap-5">
           {cardData.bitcoin.map((card) => (
-            <div key={card.id} className="bg-[#172130] rounded-[16px] px-5 py-5">
+            <div
+              key={card.id}
+              className="bg-[#172130] rounded-[16px] px-5 py-5"
+            >
               <div className="flex items-start gap-2 flex-wrap justify-between">
                 <div className="flex items-center gap-2.5">
                   <img src={card.img} className="w-[39px] h-[39px]" alt="" />
                   <div>
                     <h1 className="font-[700] text-[18px]">{card.title}</h1>
                     <div className="font-medium text-[13px]">
-                      <span className="text-[#77849B]">Staked:</span> {card.staked}
+                      <span className="text-[#77849B]">Staked:</span>{" "}
+                      {card.staked}
                     </div>
                   </div>
                 </div>
@@ -135,12 +139,15 @@ const Marketing = () => {
                   <div
                     className="absolute left-0 rounded-full bg-gradient-to-r from-[#0ABEF1] to-[#0EF7BA] text-[12px] font-medium flex pr-2 text-[#3C3C3C] justify-end top-0 h-full"
                     style={{ width: `${card.progress}%` }}
-                  >{card.progress}%</div>
+                  >
+                    {card.progress}%
+                  </div>
                 </div>
               </div>
 
               <div className="font-medium text-sm">
-                <span className="text-[#77849B]">Remaining days:</span> {card.remainingDays} days
+                <span className="text-[#77849B]">Remaining days:</span>{" "}
+                {card.remainingDays} days
               </div>
             </div>
           ))}
@@ -152,14 +159,18 @@ const Marketing = () => {
         <h1 className="font-[700] text-[24px] sm:text-[28px]">Ethereum</h1>
         <div className="mt-4 grid grid-cols-3 gap-5">
           {cardData.ethereum.map((card) => (
-            <div key={card.id} className="bg-[#172130] rounded-[16px] px-5 py-5">
+            <div
+              key={card.id}
+              className="bg-[#172130] rounded-[16px] px-5 py-5"
+            >
               <div className="flex items-start gap-2 flex-wrap justify-between">
                 <div className="flex items-center gap-2.5">
                   <img src={card.img} className="w-[39px] h-[39px]" alt="" />
                   <div>
                     <h1 className="font-[700] text-[18px]">{card.title}</h1>
                     <div className="font-medium text-[13px]">
-                      <span className="text-[#77849B]">Staked:</span> {card.staked}
+                      <span className="text-[#77849B]">Staked:</span>{" "}
+                      {card.staked}
                     </div>
                   </div>
                 </div>
@@ -175,15 +186,18 @@ const Marketing = () => {
 
               <div className="py-5">
                 <div className="rounded-full w-full overflow-hidden bg-[#29303A] h-[18px] relative">
-                <div
+                  <div
                     className="absolute left-0 rounded-full bg-gradient-to-r from-[#0ABEF1] to-[#0EF7BA] text-[12px] font-medium flex pr-2 text-[#3C3C3C] justify-end top-0 h-full"
                     style={{ width: `${card.progress}%` }}
-                  >{card.progress}%</div>
+                  >
+                    {card.progress}%
+                  </div>
                 </div>
               </div>
 
               <div className="font-medium text-sm">
-                <span className="text-[#77849B]">Remaining days:</span> {card.remainingDays} days
+                <span className="text-[#77849B]">Remaining days:</span>{" "}
+                {card.remainingDays} days
               </div>
             </div>
           ))}
@@ -195,14 +209,18 @@ const Marketing = () => {
         <h1 className="font-[700] text-[24px] sm:text-[28px]">Doge</h1>
         <div className="mt-4 grid grid-cols-3 gap-5">
           {cardData.doge.map((card) => (
-            <div key={card.id} className="bg-[#172130] rounded-[16px] px-5 py-5">
+            <div
+              key={card.id}
+              className="bg-[#172130] rounded-[16px] px-5 py-5"
+            >
               <div className="flex items-start gap-2 flex-wrap justify-between">
                 <div className="flex items-center gap-2.5">
                   <img src={card.img} className="w-[39px] h-[39px]" alt="" />
                   <div>
                     <h1 className="font-[700] text-[18px]">{card.title}</h1>
                     <div className="font-medium text-[13px]">
-                      <span className="text-[#77849B]">Staked:</span> {card.staked}
+                      <span className="text-[#77849B]">Staked:</span>{" "}
+                      {card.staked}
                     </div>
                   </div>
                 </div>
@@ -210,18 +228,27 @@ const Marketing = () => {
                 <div>
                   {card.isButton ? (
                     <button className="py-1 font-medium text-[12px] text-[#F17B2C] rounded-[6px] pr-2 bg-[#FEF3EB] pl-1 flex items-center gap-2">
-                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12.5C2.6862 12.5 0 9.8138 0 6.5C0 3.1862 2.6862 0.5 6 0.5C9.3138 0.5 12 3.1862 12 6.5C12 9.8138 9.3138 12.5 6 12.5ZM6.6 6.5V3.5H5.4V7.7H9V6.5H6.6Z" fill="#F27B2C"/>
-</svg>
-Awaiting approval
+                      <svg
+                        width="12"
+                        height="13"
+                        viewBox="0 0 12 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 12.5C2.6862 12.5 0 9.8138 0 6.5C0 3.1862 2.6862 0.5 6 0.5C9.3138 0.5 12 3.1862 12 6.5C12 9.8138 9.3138 12.5 6 12.5ZM6.6 6.5V3.5H5.4V7.7H9V6.5H6.6Z"
+                          fill="#F27B2C"
+                        />
+                      </svg>
+                      Awaiting approval
                     </button>
                   ) : (
                     <div className="">
-                  <h1 className="font-medium text-sm">Earned:</h1>
-                    <div className="flex gap-1.5 text-sm text-white">
-                      <p>{card.earned}</p>
-                      <h6 className="text-[#48FF2C]">{card.earnedAmount}</h6>
-                    </div>
+                      <h1 className="font-medium text-sm">Earned:</h1>
+                      <div className="flex gap-1.5 text-sm text-white">
+                        <p>{card.earned}</p>
+                        <h6 className="text-[#48FF2C]">{card.earnedAmount}</h6>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -229,15 +256,18 @@ Awaiting approval
 
               <div className="py-5">
                 <div className="rounded-full w-full overflow-hidden bg-[#29303A] h-[18px] relative">
-                <div
+                  <div
                     className="absolute left-0 rounded-full bg-gradient-to-r from-[#0ABEF1] to-[#0EF7BA] text-[12px] font-medium flex pr-2 text-[#3C3C3C] justify-end top-0 h-full"
                     style={{ width: `${card.progress}%` }}
-                  >{card.progress}%</div>
+                  >
+                    {card.progress}%
+                  </div>
                 </div>
               </div>
 
               <div className="font-medium text-sm">
-                <span className="text-[#77849B]">Remaining days:</span> {card.remainingDays} days
+                <span className="text-[#77849B]">Remaining days:</span>{" "}
+                {card.remainingDays} days
               </div>
             </div>
           ))}

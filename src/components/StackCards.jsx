@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import bitCoin from "/bitcoin.png";
 import doge from "/doge.png";
 import otherCoin from "/otherCoin.png";

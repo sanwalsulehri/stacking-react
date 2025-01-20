@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 
 const StakingAssets = () => {
+
+  const [drawer, setdrawer] = useState(false)
+
+  const open = () => {
+    setdrawer(prev=>!prev)
+  }
+
   return (
+  <>
+
     <div className="bg-[#F0F1F1] p-6 text-black">
       {/* Header */}
       <h2 className="text-xl font-semibold mb-4">Staking assets</h2>
@@ -222,7 +231,7 @@ const StakingAssets = () => {
             <div className="col-span-1">2 minutes ago</div>
             <div className="col-span-1 text-green-500">+224.00 USDT</div>
             <div className="col-span-1 text-orange-500">24.00 USDT</div>
-            <div className="col-span-1 flex border px-2 items-center w-[160px] py-1 rounded-lg">
+            <div onClick={open} className="col-span-1 flex border px-2 items-center w-[160px] py-1 rounded-lg">
               <svg
                 width="13"
                 height="12"
@@ -449,6 +458,65 @@ const StakingAssets = () => {
         </div>
       </div>
     </div>
+
+
+{drawer && 
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-2 sm:p-4">
+  
+  <div className="relative w-full max-w-[446px] rounded-3xl bg-white px-3 py-6 sm:p-6">
+  
+    <div className="mb-4 flex items-center justify-between">
+      <div>
+        <h3 className="text-[18px] font-semibold text-[#000000]">Withdrawal request</h3>
+        <p className="text-[14px] font-semibold text-[#77849B]">2 minutes ago</p>
+      </div>
+      <button onClick={open}  className="rounded-full p-2 border-2 border-[#C5C5C5] hover:bg-gray-100">
+        <svg className="h-6 w-6 text-[#C5C5C5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    
+    <div className="mb-6 text-center">
+      <p className="mb-1 text-[14px] text-[#77849B]">Withdrawal amount</p>
+      <p className="text-[18px] font-[700] text-balck">50.00 USDT</p>
+    </div>
+
+  
+    
+    <div className="mb-6 rounded-xl mx-auto max-w-[376px] bg-gray-50 p-4">
+      <div className="mb-2 flex flex-wrap items-center gap-0.5 justify-center">
+        <p className="text-[12px] font-[600] text-[#77849B]">To address:</p>
+        <p className="text-[12px] font-[600] text-black" id="wallet-address">73x3824njdaf893242349324423</p>
+      </div>
+      <div className="flex items-center justify-center gap-2">
+        <span className="rounded-[8px] text-black bg-[#EEF4F6] px-3 py-2 font-[500] text-[12px]">ERC-20</span>
+        <button onclick="copyAddress()" className="flex items-center rounded-[8px] bg-white text-black border border-[#E4E5E9] px-2 py-2 font-[500] text-[12px]">
+          <svg className="mr-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          Copy address
+        </button>
+      </div>
+    </div>
+
+
+
+
+    
+    <div className="space-y-3">
+      <button className="w-full rounded-[10px] bg-[#48FF2C] text-black py-3 text-center font-semibold  hover:bg-green-400  ">
+        Confirm withdrawal
+      </button>
+      <button className="w-full rounded-[10px] bg-[#FF5A2C] py-3 text-center font-semibold text-white hover:bg-red-500 transition-colors">
+        Refuse withdrawal
+      </button>
+    </div>
+  </div>
+</div>
+}
+</>
   );
 };
 

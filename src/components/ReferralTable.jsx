@@ -68,7 +68,9 @@ const ReferralTable = () => {
   ];
 
   return (
-    <div className='p-3 bg-[#191E25]'>
+    <div className=" py-20">
+        <h1 className="font-[700] text-3xl sm:text-[42px] mb-10">Refferal history</h1>
+    <div className='p-3 bg-[#191E25] rounded-lg'>
     <div className="w-full bg-[#242B35] rounded-lg p-6">
       <table className="w-full">
         <thead className=''>
@@ -92,6 +94,7 @@ const ReferralTable = () => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
     </div>
   );
