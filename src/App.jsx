@@ -2,25 +2,22 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Stacking from './pages/Stacking';
-import Footer from './components/Footer';
-
-
-
+import Dashboard from './pages/Dashboard';
 const App = () => {
 
 
   return (
     <Router>
 
-    <div className="bg-[#10141B] text-white min-h-screen w-full">
+    <div className="">
         <Routes>
           <Route path="/" element={<Home />} /> 
           <Route path="/stacking" element={<Stacking />} /> 
+          <Route path="/dashboard" element={<Dashboard />} /> 
 
         </Routes>
      
       
-      <Footer />
     </div>
     </Router>
 
