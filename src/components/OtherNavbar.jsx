@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import user from '/user.png'
 
-const Navbar = () => {
+const OtherNavbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const links = [
@@ -58,13 +59,9 @@ const Navbar = () => {
         </div>
 
         <div className="flex  items-center gap-4 ">
-          <div className="sm:flex hidden items-center gap-4">
-            <button className="bg-[#48FF2C] hover:bg-[#46ce30] sm:text-[16px] text-sm rounded-lg sm:rounded-[12px] px-4 sm:px-7 py-1.5 sm:py-2 font-semibold text-black">
-              Login
-            </button>
-            <button className="hover:bg-[#48FF2C] text-[#48FF2C] sm:text-[16px] text-sm rounded-lg sm:rounded-[12px] px-4 sm:px-7 py-1.5 sm:py-2 font-semibold border border-[#3E3E3E]  hover:text-black">
-              Register
-            </button>
+          <div className="flex  items-center cursor-pointer  gap-4">
+            <h1 className="font-semibold hidden sm:inline-flex">Reece.J</h1>
+           <img src={user} className="sm:w-[52px] w-10 h-10 rounded-full object-cover sm:h-[52px] " alt="" />
           </div>
           <div
             onClick={toggleDrawer}
@@ -123,17 +120,10 @@ const Navbar = () => {
           </a>
         ))}
 
-        <div className="flex sm:hidden flex-col w-full mt-10 gap-4">
-          <button className="bg-[#48FF2C] hover:bg-[#46ce30] sm:text-[16px] text-sm rounded-lg sm:rounded-[12px] px-4 sm:px-7 py-1.5 sm:py-2 font-semibold text-black">
-            Login
-          </button>
-          <button className="hover:bg-[#48FF2C] text-[#48FF2C] sm:text-[16px] text-sm rounded-lg sm:rounded-[12px] px-4 sm:px-7 py-1.5 sm:py-2 font-semibold border border-[#3E3E3E]  hover:text-black">
-            Register
-          </button>
-        </div>
+       
       </div>
     </>
   );
 };
 
-export default Navbar;
+export default OtherNavbar;
