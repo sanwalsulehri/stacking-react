@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -59,9 +60,12 @@ const Navbar = () => {
 
         <div className="flex  items-center gap-4 ">
           <div className="sm:flex hidden items-center gap-4">
+           
+           <Link to="/login">
             <button className="bg-[#48FF2C] hover:bg-[#46ce30] sm:text-[16px] text-sm rounded-lg sm:rounded-[12px] px-4 sm:px-7 py-1.5 sm:py-2 font-semibold text-black">
               Login
             </button>
+            </Link>
             <button className="hover:bg-[#48FF2C] text-[#48FF2C] sm:text-[16px] text-sm rounded-lg sm:rounded-[12px] px-4 sm:px-7 py-1.5 sm:py-2 font-semibold border border-[#3E3E3E]  hover:text-black">
               Register
             </button>
