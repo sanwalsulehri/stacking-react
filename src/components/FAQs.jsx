@@ -23,7 +23,7 @@ const FAQs = () => {
       answer: `While some networks allow you to unstake your coins at any time, others have lock-up periods during which your coins cannot be accessed. It is important to check the specific terms and conditions of the staking network before getting involved.`,
     },
     {
-      id: 4,
+      id: 5,
       question: "What are the decentralized staking benefits?",
       answer: `While some networks allow you to unstake your coins at any time, others have lock-up periods during which your coins cannot be accessed. It is important to check the specific terms and conditions of the staking network before getting involved.`,
     },
