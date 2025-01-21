@@ -4,13 +4,13 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist', // Ensure the output directory matches your `vercel.json`
+    outDir: 'dist',  
     rollupOptions: {
-      input: 'index.html', // Ensure the correct entry file is used
+      input: 'index.html',
     },
   },
   server: {
-    port: 3000, // Optional: Specify your dev server port
+    port: 3000,
   },
-  base: '/', // Ensure the base path is correctly set for your deployment
+  base: '/',
 });
