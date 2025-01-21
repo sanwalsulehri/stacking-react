@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Stake = () => {
+const WithDrawCoin = () => {
   const [selectedDuration, setSelectedDuration] = useState(60);
   const [lockedAmount, setLockedAmount] = useState("0.00");
   const [autoStaking, setAutoStaking] = useState(false);
@@ -32,7 +32,7 @@ const Stake = () => {
     "16.01%";
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
+    <div className="fixed z-[99999] inset-0 bg-black/50 flex items-center justify-center">
       <div className="bg-white rounded-2xl w-[30rem] p-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-6 ">
@@ -192,4 +192,4 @@ const Stake = () => {
   );
 };
 
-export default Stake;
+export default WithDrawCoin;

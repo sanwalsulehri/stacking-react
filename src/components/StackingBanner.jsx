@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import TopUp from "./Topup";
+import QRCodeModal from "./QRmodal";
+import Stake from "./Stake";
+import WithDrawCoin from "./Conwithdraw";
+import WithdrawTo from "./withdraw";
 
 const StackingBanner = () => {
+  const [drawer, setdrawer] = useState(false)
+
+  const open = () => {
+    setdrawer(!drawer)
+  }
+
+  const [withdraw, setwithdraw] = useState(false)
+
+  const withdrawHandler = () => {
+    setwithdraw(prev=>!prev)
+  }
+
+
   const gradientStyle = {
     background: "linear-gradient(135deg, #3096FE, #4F96DD, #5136B1, #7064C9)",
   };
@@ -22,7 +40,8 @@ const StackingBanner = () => {
             </div>
 
             <div className="flex items-center flex-wrap gap-[11px]">
-              <button className="bg-white text-sm font-medium text-black hover:bg-white/80 rounded-[10px] py-[11px] pl-4 pr-[21px] flex items-center gap-2">
+              <button
+              className="bg-white text-sm font-medium text-black hover:bg-white/80 rounded-[10px] py-[11px] pl-4 pr-[21px] flex items-center gap-2">
                 <svg
                   width="8"
                   height="16"
@@ -38,7 +57,7 @@ const StackingBanner = () => {
                 Top up
               </button>
 
-              <button className="bg-white text-sm font-medium text-black hover:bg-white/80 rounded-[10px] py-[11px] pl-4 pr-[21px] flex items-center gap-2">
+              <button onClick={withdrawHandler} className="bg-white text-sm font-medium text-black hover:bg-white/80 rounded-[10px] py-[11px] pl-4 pr-[21px] flex items-center gap-2">
                 <svg
                   className="rotate-180"
                   width="8"
@@ -55,7 +74,7 @@ const StackingBanner = () => {
                 Withdraw money
               </button>
 
-              <button className="bg-[#48FF2C] shadow-sm text-sm font-medium text-black hover:bg-[#48FF2C]/80 rounded-[10px] py-[11px] pl-4 pr-[21px] flex items-center gap-2">
+              <button onClick={open} className="bg-[#48FF2C] shadow-sm text-sm font-medium text-black hover:bg-[#48FF2C]/80 rounded-[10px] py-[11px] pl-4 pr-[21px] flex items-center gap-2">
                 <svg
                   width="20"
                   height="20"
@@ -74,6 +93,17 @@ const StackingBanner = () => {
           </div>
         </div>
       </div>
+
+{drawer && 
+      <TopUp drawer={drawer} setdrawer={setdrawer} />
+}
+
+
+{ withdraw && 
+<WithdrawTo setwithdraw={setwithdraw} />
+}
+
+
     </>
   );
 };
