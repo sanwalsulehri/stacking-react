@@ -8,6 +8,8 @@ import CoinPage from './pages/CoinPage';
 import UsersPage from './pages/UsersPage';
 import UsersDetails from './pages/UsersDetails';
 import RefferalsPage from './pages/RefferalsPage';
+import Login from './pages/Login';
+import Confirm from './pages/Confirm';
 
 
 
@@ -21,6 +23,8 @@ const App = () => {
     {/* <div className="bg-[#10141B] text-white min-h-screen w-full"> */}
         <Routes>
           <Route path="/" element={<Home />} /> 
+          <Route path="/login" element={<Login />} /> 
+          <Route path="/confirm" element={<Confirm />} /> 
           <Route path="/stacking" element={<Stacking />} /> 
           <Route path="/dashboard" element={<Dashboard />} /> 
           <Route path="/coinPage" element={<CoinPage />} /> 
