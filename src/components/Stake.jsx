@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CoinSelector = () => {
+const Stake = () => {
   const [selectedCoin, setSelectedCoin] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(true);
 
@@ -17,7 +17,7 @@ const CoinSelector = () => {
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+    <div className="fixed z-[999999] inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
       <div className="w-[24rem] md:w-[30rem] rounded-lg bg-white p-6 shadow-lg">
         <div className="mb-6 flex items-center justify-between">
           <h2 className="text-lg font-semibold text-gray-700">
@@ -188,4 +188,4 @@ const EthereumIcon = () => (
   </svg>
 );
 
-export default CoinSelector;
+export default Stake;

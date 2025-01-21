@@ -8,6 +8,8 @@ import StackingBanner from "../components/StackingBanner";
 import StackCards from "../components/StackCards";
 import Marketing from "../components/Marketing";
 import Footer from "../components/Footer";
+import CorePrinciples from "../components/CorePrinciples";
+import TopUp from "../components/Topup";
 const Stacking = () => {
   const tabs = [
     {
@@ -45,6 +47,8 @@ const Stacking = () => {
   const handleTabClick = (id) => {
     setActiveTab(id);
   };
+
+
   return (
     <>
     <div className="bg-[#10141B] text-white min-h-screen w-full">
@@ -72,6 +76,7 @@ const Stacking = () => {
           ))}
         </div>
       </div>
+
 
       <StackingBanner />
 

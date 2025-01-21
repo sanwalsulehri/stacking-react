@@ -1,14 +1,22 @@
 import React, { useState } from "react";
+import Stake from "./Stake";
 
 const QRCodeModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const [drawerOther2, setdrawerOther2] = useState(false)
 
-  if (!isModalOpen) {
-    return null;
+
+  
+
+  const openOther2 = () => {
+    setdrawerOther2(!drawerOther2)
+    setIsModalOpen(false)
   }
 
+
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
+    <>
+    <div className="fixed z-[999999] inset-0 bg-black/50 flex items-center justify-center">
       <div className="bg-white rounded-2xl w-[30rem] p-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
@@ -33,7 +41,6 @@ const QRCodeModal = () => {
           </div>
           <button
             className="text-gray-500 hover:text-gray-700"
-            onClick={() => setIsModalOpen(false)}
           >
             <svg
               width="34"
@@ -1004,11 +1011,18 @@ const QRCodeModal = () => {
         </p>
 
         {/* Confirm Button */}
-        <button className="w-full bg-[#48FF2C] text-black py-3 rounded-lg font-medium hover:bg-[#00c87d]">
+            <button 
+        onClick={openOther2}
+        className="w-full bg-[#48FF2C] text-black py-3 rounded-lg font-medium hover:bg-[#00c87d]">
           Confirm deposit
         </button>
       </div>
     </div>
+
+{drawerOther2 && 
+  <Stake />
+  }
+  </>
   );
 };
 

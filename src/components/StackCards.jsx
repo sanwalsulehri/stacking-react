@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import bitCoin from "/bitcoin.png";
 import doge from "/doge.png";
 import otherCoin from "/otherCoin.png";
 import UsdT from "/UsdT.png";
+import QRCodeModal from "./QRmodal";
 
 // Object to hold card data
 const cardData = [
@@ -33,7 +34,9 @@ const cardData = [
 ];
 
 const StackCards = () => {
+
   return (
+    <>
     <div className="grid grid-cols-1 max-w-7xl mx-auto px-4 mt-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
       {cardData.map((card) => (
         <div key={card.id} className="bg-[#172130] p-4 rounded-[18px]">
@@ -54,6 +57,11 @@ const StackCards = () => {
         </div>
       ))}
     </div>
+
+    
+
+
+  </>
   );
 };
 
